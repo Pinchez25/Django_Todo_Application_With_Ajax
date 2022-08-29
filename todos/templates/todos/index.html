@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% load static %}
+{% block styles %}
+<style>
+    .complete{
+        text-decoration: line-through;
+    }
+
+</style>
+
+{% endblock styles %}
+{% block content %}
+
+<div class="row mt-3 justify-content-center">
+    <div class="col-md-8">
+        <p class="display-4 text-center text-dark">My TODO List</p>
+    </div>
+    <div class="col-md-4 mt-3">
+        <a class="btn btn-secondary" href="{% url 'create-todo' %}">Create Todo</a>
+    </div>
+</div>
+    <hr>
+    <div class="row justify-content-center m-3">
+        <div class="col-md-8">
+            <div class="card shadow-lg justify-content-center">
+                
+                <div class="card-body">
+                    <i class="text-muted text-center">Click on todo to complete</i>
+                    <form method="get">
+                        <input type="search" id="search_todo" name="todo" placeholder="Type to search a todo..." class="form-control mb-3">
+                    </form>
+                    <ul id="list-todos">
+                        
+                        {% comment %} {% for todo in todos %}
+                        <li>
+                            <p class="todo-link" data-todo={{todo.id}}>
+                                {{todo.title}}&nbsp;&nbsp; <span class="text-info">{{todo.created}}</span>
+                            </p>
+                        </li>
+                        <div class="card-footer">
+                            <p>
+                                <a href="{% url 'update-todo' todo.id %}">Update</a>
+                                <a href="{% url 'todo-detail' todo.id %}">View</a>
+                            </p>
+                            
+                        </div>
+                        <hr class='text-black-50'>
+                        {% endfor %} {% endcomment %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'js/index.js' %}"></script>
+  
+{% endblock scripts %}

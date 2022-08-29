@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card m-3">
+            <div class="card-header bg-white">
+                <p>
+                    <a href="{% url 'todos' %}" class="display-4 link-dark text-decoration-none">&lt;</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="text-success display-6">{% if request.path == '/create-todo/' %}Create a Todo{% else %}Update Todo{% endif %}</span>
+                </p>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    {{form}}
+                    <br><br>
+                    <div>
+                      <input class="btn btn-primary" type="submit" value="{% if request.path == '/create-todo/' %}Create{% else %}Update{% endif %}">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}
