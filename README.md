@@ -16,13 +16,28 @@
   py -m venv venv #for windows users
   
 ```
+- Activate the virtual environment
+```
+    venv\Scripts\activate
+```
 - install the requirements
 
 ```
   pip install -r requirements.txt
 ```
 
+- Make migrations and migrate
+```
+  py manage.py makemigrations
+  py manage.py migrate
+```
+
 - Run the server and that's it
 ```
   py manage.py runserver
+```
+
+### To access the admin page, create a Superuser
+```
+   py manage.py createsuperuser
 ```
