@@ -1,8 +1,13 @@
 # Django Todo-Application With Ajax
 
-![Drag Racing](Dragster.jpg)
-![Drag Racing](Dragster.jpg)
-![Drag Racing](Dragster.jpg)
+#### Home Page - A list of Todos
+![TODO List](https://github.com/Pinchez25/Django_Todo_Application_With_Ajax/blob/main/screenshots/todos_list.png)
+
+#### Create a Todo Page
+![Create a Todo](https://github.com/Pinchez25/Django_Todo_Application_With_Ajax/blob/main/screenshots/create_todo.png)
+
+#### Update a Todo page
+![Update a Todo](https://github.com/Pinchez25/Django_Todo_Application_With_Ajax/blob/main/screenshots/update_todo.png)
 
 >To run the application, follow the following steps
 
