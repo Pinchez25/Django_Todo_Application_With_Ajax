@@ -12,17 +12,17 @@
 >To run the application, follow the following steps
 
 - Create a virtual environment
-```py
+``` py
   py -m venv venv #for windows users
   
 ```
 - Activate the virtual environment
-```py
+``` py
     venv\Scripts\activate
 ```
 - install the requirements
 
-```py
+``` py
   pip install -r requirements.txt
 ```
 
