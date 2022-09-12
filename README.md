@@ -12,32 +12,32 @@
 >To run the application, follow the following steps
 
 - Create a virtual environment
-```
+```py
   py -m venv venv #for windows users
   
 ```
 - Activate the virtual environment
-```
+```py
     venv\Scripts\activate
 ```
 - install the requirements
 
-```
+```py
   pip install -r requirements.txt
 ```
 
 - Make migrations and migrate
-```
+```py
   py manage.py makemigrations
   py manage.py migrate
 ```
 
 - Run the server and that's it
-```
+```py
   py manage.py runserver
 ```
 
 ### To access the admin page, create a Superuser
-```
+```py
    py manage.py createsuperuser
 ```
